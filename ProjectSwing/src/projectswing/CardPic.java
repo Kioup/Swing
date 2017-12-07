@@ -7,8 +7,11 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-public class CardPic extends JFrame{
+public class CardPic extends JPanel{
+    
+    private static final long serialVersionUID = 1L;
         
         Cards carte;
     
@@ -16,10 +19,10 @@ public class CardPic extends JFrame{
             this.carte = carte;
         }
         
-        public void afficheCard(Graphics g){
+        public void painComponent(Graphics g){
         try {
         Image img = ImageIO.read(new File(this.carte.image));
-        g.drawImage(img, 0, 0, this);
+        g.drawImage(img, 0, 0, null);
         }
         catch (IOException e) {
             e.printStackTrace();

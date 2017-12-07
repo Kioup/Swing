@@ -9,13 +9,11 @@ import javax.imageio.ImageIO;
 
 public class Fenetre extends JFrame {
     
-    public Fenetre(Cards carte){
+    public Fenetre(){
         this.setTitle("Fenetre Java");
         this.setSize(600, 400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(new CardPic(carte));
-        this.setVisible(true);
     }  
     
 }
