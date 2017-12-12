@@ -1,6 +1,7 @@
 
 package projectswing;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
@@ -19,9 +20,13 @@ public class CardPic extends JPanel{
             this.carte = carte;
         }
         
-        public void painComponent(Graphics g){
+        public void paintComponent(Graphics g){
         try {
+            
+        g.setColor(Color.BLACK);
+        g.fillRect(680, 680, 10, 10);
         Image img = ImageIO.read(new File(this.carte.image));
+        System.out.println(img.getHeight(null));
         g.drawImage(img, 0, 0, null);
         }
         catch (IOException e) {
